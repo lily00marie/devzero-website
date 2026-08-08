@@ -2747,31 +2747,50 @@ h2 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: minmax(220px, 1.35fr) repeat(4, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
   margin-bottom: 2.5rem;
+  align-items: start;
 }
 
 .footer-brand p {
-  margin-top: 0.75rem;
-  font-size: 0.85rem;
-  color: var(--muted);
-  max-width: 22rem;
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-soft);
+  max-width: 16rem;
+}
+
+.footer-social {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: var(--text-soft);
+}
+
+.footer-social svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.footer-social:hover {
+  color: var(--accent);
 }
 
 .footer-col h4 {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text);
+  margin-bottom: 0.75rem;
 }
 
 .footer-col a {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--text-soft);
-  padding: 0.3rem 0;
+  padding: 0.28rem 0;
+  line-height: 1.45;
 }
 
 .footer-col a:hover { color: var(--accent); }
@@ -2788,10 +2807,25 @@ h2 {
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
   font-size: 0.8rem;
   color: var(--muted);
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-legal a {
+  color: var(--muted);
+}
+
+.footer-legal a:hover {
+  color: var(--accent);
 }
 
 .proto-badge {

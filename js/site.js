@@ -60,24 +60,46 @@
           <div class="footer-grid">
             <div class="footer-brand">
               <a class="logo" href="${home}">${makeLogo()}</a>
-              <p>Autonomous optimization for Kubernetes compute and inference — savings without restarts, proof before automation.</p>
+              <p>Autonomous optimization for Kubernetes and AI workloads.</p>
+              <a class="footer-social" href="https://www.linkedin.com/company/devzero-ai/" aria-label="DevZero on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.813 20.452H3.86V9h2.953v11.452z"/></svg>
+              </a>
             </div>
             <div class="footer-col">
               <h4>Product</h4>
-              <a href="https://www.devzero.io/">Compute Optimization</a>
-              <a href="${home}">Core Technologies</a>
-              <a href="https://www.devzero.io/inference">Inference Optimization</a>
+              <a href="https://www.devzero.io/">Cost Monitoring</a>
+              <a href="https://www.devzero.io/">Cost Optimization</a>
+              <a href="https://www.devzero.io/">GPU Optimization</a>
+              <a href="https://www.devzero.io/inference">Inference Platform</a>
+            </div>
+            <div class="footer-col">
+              <h4>Learn</h4>
+              <a href="https://www.devzero.io/customers">Case Studies</a>
+              <a href="https://docs.devzero.io/">Documentation</a>
+              <a href="https://www.devzero.io/blog">Blog</a>
+              <a href="https://www.devzero.io/guides">Guides</a>
+            </div>
+            <div class="footer-col">
+              <h4>Tools</h4>
+              <a href="https://www.devzero.io/analyze-cluster">Analyze Cluster</a>
+              <a href="https://www.devzero.io/compare-instances">Compare Instances</a>
+              <a href="https://www.devzero.io/cloud-pricing">Cloud Pricing</a>
+              <a href="https://www.devzero.io/gpu-pricing">GPU Pricing</a>
             </div>
             <div class="footer-col">
               <h4>Company</h4>
-              <a href="https://www.devzero.io/resources">Resources</a>
-              <a href="https://www.devzero.io/customers">Customers</a>
               <a href="https://www.devzero.io/about">About</a>
+              <a href="https://www.devzero.io/careers">Careers</a>
+              <a href="https://www.devzero.io/contact">Contact Us</a>
               <a href="https://www.devzero.io/pricing">Pricing</a>
             </div>
           </div>
           <div class="footer-bottom">
-            <span>© 2026 DevInfra Inc</span>
+            <span>Copyright © 2026 DevInfra Inc</span>
+            <div class="footer-legal">
+              <a href="https://www.devzero.io/terms-and-conditions">Terms and Conditions</a>
+              <a href="https://www.devzero.io/privacy-policy">Privacy Policy</a>
+            </div>
           </div>
         </div>
       </footer>
