@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Core Technologies — Workload, Cluster &amp; Network Optimization | DevZero</title>
+  <meta name="description" content="DevZero’s three core technologies: Workload Autoscaler (MPA), Cluster Autoscaler with CRIU live migration, and Network Optimizer — autoscaling without downsides." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main>
+    <header class="product-hero">
+      <div class="container">
+        <div class="product-hero-grid">
+          <div class="product-hero-copy">
+            <p class="eyebrow">Core Technologies</p>
+            <h1>Autoscaling and optimization<br /><span class="accent">without downsides</span></h1>
+            <p class="lede">
+              Reducing compute waste isn’t worth it if you have to sacrifice performance and reliability.
+              DevZero’s three core technologies eliminate that tradeoff.
+            </p>
+            <div class="hero-actions" id="start">
+              <a class="btn btn-primary btn-lg" href="#demo">Install operator →</a>
+              <a class="btn btn-ghost btn-lg" href="#workload">Explore technologies</a>
+            </div>
+          </div>
+
+          <div class="hero-stage" aria-label="Three core technologies working together">
+            <div class="hero-stage-label">
+              <span>Runtime stack</span>
+              <span class="live">Optimizing</span>
+            </div>
+            <div class="anim-core-hero">
+              <div class="core-layer is-workload">
+                <div class="core-layer-head">
+                  <span class="core-layer-tag">01</span>
+                  <strong>Workload Autoscaler</strong>
+                  <span class="core-layer-badge">MPA · no restarts</span>
+                </div>
+                <div class="core-bars">
+                  <div class="core-bar"><i class="fill-v"></i></div>
+                  <div class="core-bar"><i class="fill-h"></i></div>
+                  <div class="core-bar"><i class="fill-g"></i></div>
+                </div>
+              </div>
+              <div class="core-layer is-cluster">
+                <div class="core-layer-head">
+                  <span class="core-layer-tag">02</span>
+                  <strong>Cluster Autoscaler</strong>
+                  <span class="core-layer-badge">CRIU migrate</span>
+                </div>
+                <div class="core-nodes">
+                  <div class="core-node is-active"><span></span><span></span><span></span></div>
+                  <div class="core-node is-draining"><span></span><span></span></div>
+                  <div class="core-node is-empty"></div>
+                </div>
+              </div>
+              <div class="core-layer is-network">
+                <div class="core-layer-head">
+                  <span class="core-layer-tag">03</span>
+                  <strong>Network Optimizer</strong>
+                  <span class="core-layer-badge">Same AZ</span>
+                </div>
+                <div class="core-net">
+                  <div class="core-pod a">A</div>
+                  <div class="core-pod b">B</div>
+                  <div class="core-link"></div>
+                  <div class="core-cost">−cross-AZ $</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="band-soft">
+      <div class="container container-wide tech-intro">
+        <p class="section-label">The stack</p>
+        <h2>Stop choosing between cost and reliability</h2>
+        <div class="module-grid">
+          <a class="module tech-jump" href="#workload">
+            <span class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="14" width="5" height="6" rx="1" />
+                <rect x="10" y="10" width="5" height="10" rx="1" />
+                <rect x="16" y="6" width="5" height="14" rx="1" />
+              </svg>
+            </span>
+            <h3>Workload Autoscaler</h3>
+            <p>MPA combines VPA + HPA with custom metrics and CRIU resizing.</p>
+            <span class="more">See how it works →</span>
+          </a>
+          <a class="module tech-jump" href="#cluster">
+            <span class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                <path d="M17.5 14v7M14 17.5h7" />
+              </svg>
+            </span>
+            <h3>Cluster Autoscaler</h3>
+            <p>A smarter Karpenter — proactive binpacking with live migration.</p>
+            <span class="more">See how it works →</span>
+          </a>
+          <a class="module tech-jump" href="#network">
+            <span class="module-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="12" r="2.75" />
+                <circle cx="18" cy="6" r="2.75" />
+                <circle cx="18" cy="18" r="2.75" />
+                <path d="M8.6 10.8 15.4 7.2M8.6 13.2l6.8 3.6" />
+              </svg>
+            </span>
+            <h3>Network Optimizer</h3>
+            <p>Schedule for locality — lower latency, no cross-AZ transfer fees.</p>
+            <span class="more">See how it works →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="workload">
+      <div class="container">
+        <div class="split">
+          <div>
+            <p class="section-label">Workload Autoscaler</p>
+            <h2>VPA + HPA with custom metrics and no restarts</h2>
+            <p class="section-lede">
+              DevZero combines vertical and horizontal autoscaling into an autonomous,
+              Multidimensional Pod Autoscaler (MPA). It uses several techniques to improve
+              workload reliability while minimizing expensive waste.
+            </p>
+          </div>
+          <div class="feature-visual" aria-label="MPA vertical and horizontal scale without restarts">
+            <div class="anim-mpa">
+              <div class="mpa-stage-label">
+                <span>Multidimensional Pod Autoscaler</span>
+                <span class="live-chip">No restart</span>
+              </div>
+              <div class="mpa-pod">
+                <div class="mpa-pod-head">
+                  <span class="mpa-name">api-worker-7f3a</span>
+                  <span class="mpa-status">Running</span>
+                </div>
+                <div class="mpa-gauge">
+                  <div class="mpa-gauge-meta"><span>CPU</span><strong>2000m → 480m</strong></div>
+                  <div class="mpa-track"><i class="mpa-fill-cpu"></i></div>
+                </div>
+                <div class="mpa-gauge">
+                  <div class="mpa-gauge-meta"><span>Memory</span><strong>4.0 → 1.1 GiB</strong></div>
+                  <div class="mpa-track"><i class="mpa-fill-mem"></i></div>
+                </div>
+              </div>
+              <div class="mpa-replicas">
+                <div class="mpa-rep is-on">r1</div>
+                <div class="mpa-rep is-on">r2</div>
+                <div class="mpa-rep is-spawn">r3</div>
+                <div class="mpa-rep is-off">r4</div>
+                <span class="mpa-hpa-label">HPA · replicas</span>
+              </div>
+              <div class="mpa-criu">
+                <span class="mpa-criu-step">Checkpoint</span>
+                <span class="mpa-criu-arrow">→</span>
+                <span class="mpa-criu-step">Recreate</span>
+                <span class="mpa-criu-arrow">→</span>
+                <span class="mpa-criu-step is-lit">Run rightsized</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="point-cards point-cards-5">
+          <article class="point-card">
+            <h3>Vertical Rightsizing</h3>
+            <p>Rightsize CPU, memory, and GPU based on workload health and usage.</p>
+          </article>
+          <article class="point-card">
+            <h3>Horizontal Autoscaling</h3>
+            <p>Add replicas or drop pods in response to workload profiling.</p>
+          </article>
+          <article class="point-card">
+            <h3>Custom Metrics</h3>
+            <p>Scale based on external, custom metrics with DevZero’s KEDA fork.</p>
+          </article>
+          <article class="point-card">
+            <h3>CRIU Resizing</h3>
+            <p>Checkpoint, recreate, and run rightsized workloads instantly. No restarts.</p>
+          </article>
+          <article class="point-card">
+            <h3>Firm Boundaries</h3>
+            <p>Override MPA’s recommendations with min/max settings for resources.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band-soft" id="cluster">
+      <div class="container">
+        <div class="split reverse">
+          <div>
+            <p class="section-label">Cluster Autoscaler</p>
+            <h2>A smarter Karpenter, chaos-proofed with CRIU live migration</h2>
+            <p class="section-lede">
+              Cluster Autoscaler (CA) and Karpenter are reactive tools. If you schedule three nodes
+              but only need one, Karpenter drains two and binpacks one. This jeopardizes workload
+              reliability. Not with DevZero.
+            </p>
+          </div>
+          <div class="feature-visual" aria-label="Proactive binpacking with live migration">
+            <div class="anim-cluster">
+              <div class="mpa-stage-label">
+                <span>Context-aware binpack</span>
+                <span class="live-chip">Migrating</span>
+              </div>
+              <div class="ca-nodes">
+                <div class="ca-node is-packed">
+                  <header>node-a · kept</header>
+                  <div class="ca-pods">
+                    <span class="ca-pod p1">web</span>
+                    <span class="ca-pod p2">api</span>
+                    <span class="ca-pod p3 is-incoming">cache</span>
+                  </div>
+                </div>
+                <div class="ca-bridge" aria-hidden="true">
+                  <span class="ca-mig">CRIU</span>
+                  <div class="ca-mig-line"></div>
+                </div>
+                <div class="ca-node is-draining">
+                  <header>node-b · drain</header>
+                  <div class="ca-pods">
+                    <span class="ca-pod p3 is-leaving">cache</span>
+                    <span class="ca-pod ghost">—</span>
+                  </div>
+                </div>
+                <div class="ca-node is-gone">
+                  <header>node-c · off</header>
+                  <div class="ca-pods">
+                    <span class="ca-pod ghost">empty</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ca-footnote">
+                <span>Karpenter-compatible</span>
+                <strong>3 nodes → 1 · zero restarts</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="point-cards">
+          <article class="point-card">
+            <h3>Context-Aware Scheduler</h3>
+            <p>Proactively binpack the fewest nodes needed, based on profiling.</p>
+          </article>
+          <article class="point-card">
+            <h3>Reactive Binpacking</h3>
+            <p>Drain nodes without triggering restarts, thanks to CRIU Live Migration.</p>
+          </article>
+          <article class="point-card">
+            <h3>Chaos-Proof</h3>
+            <p>Migrate workloads across nodes/clusters without restarts. Ideal for AZ outages.</p>
+          </article>
+          <article class="point-card">
+            <h3>Open-Source Compatible</h3>
+            <p>Stick with your Karpenter config; we’ll complement and enhance it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="network">
+      <div class="container">
+        <div class="split">
+          <div>
+            <p class="section-label">Network Optimizer</p>
+            <h2>Higher performance<br />with a lower bill</h2>
+            <p class="section-lede">
+              Most infra teams know they’re overprovisioned, but most underestimate the costs of
+              network inefficiencies. DevZero schedules each workload in the optimal location to
+              minimize latency and costs.
+            </p>
+          </div>
+          <div class="feature-visual" aria-label="Location-aware placement cutting cross-AZ cost">
+            <div class="anim-network">
+              <div class="mpa-stage-label">
+                <span>Location-aware schedule</span>
+                <span class="live-chip good">Same AZ</span>
+              </div>
+              <div class="net-map">
+                <div class="net-az az-a">
+                  <header>AZ-a</header>
+                  <div class="net-w is-chatty">svc-a</div>
+                  <div class="net-w is-chatty is-paired">svc-b</div>
+                  <div class="net-w">batch</div>
+                </div>
+                <div class="net-az az-b">
+                  <header>AZ-b</header>
+                  <div class="net-w is-lonely">svc-b′</div>
+                  <div class="net-w">idle</div>
+                </div>
+                <svg class="net-paths" viewBox="0 0 320 160" aria-hidden="true">
+                  <path class="net-path is-bad" d="M118 72 C170 40, 210 40, 248 78" />
+                  <path class="net-path is-good" d="M95 88 C110 108, 130 108, 145 92" />
+                </svg>
+              </div>
+              <div class="net-metrics">
+                <div class="net-metric is-bad">
+                  <span>Cross-AZ</span>
+                  <strong class="net-fee">$0.02/GB</strong>
+                </div>
+                <div class="net-metric is-good">
+                  <span>p95 latency</span>
+                  <strong class="net-lat">42ms → 9ms</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="point-cards">
+          <article class="point-card">
+            <h3>Location-Aware</h3>
+            <p>DevZero schedules workloads that talk frequently to the same node or cluster.</p>
+          </article>
+          <article class="point-card">
+            <h3>Less Latency</h3>
+            <p>When chatty workloads are placed optimally, latency decreases measurably.</p>
+          </article>
+          <article class="point-card">
+            <h3>No Cross-AZ Data Transfer</h3>
+            <p>Stop paying an extra fee to send data between two buildings.</p>
+          </article>
+          <article class="point-card">
+            <h3>CRIU Failsafe</h3>
+            <p>One AZ isn’t a risk anymore. We detect outages and live migrate proactively.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" id="demo">
+      <div class="container">
+        <h2>See what DevZero can do for your infrastructure</h2>
+        <p class="section-lede">
+          Install the read-only operator. We’ll reveal opportunities for workload, cluster,
+          and network optimization across your clouds.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#">Install operator →</a>
+          <a class="btn btn-ghost btn-lg" href="https://www.devzero.io/">Compute Optimization</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../js/site.js"></script>
+</body>
+</html>
